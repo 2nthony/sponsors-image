@@ -1,0 +1,28 @@
+name: Scheduler
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+  push:
+    branches: [ main ]
+
+jobs:
+  update-sponsors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Update sponsors.svg
+        run: npx sponsors-svg -w 800 && npx sponsors-svg -w 1300 -o sponsors.wide.svg
+        env:
+          SPONSORS_TOKEN: ${{ secrets.SPONSORS_TOKEN }}
+          SPONSORS_LOGIN: 2nthony
+
+      - name: Commit
+        uses: EndBug/add-and-commit@v4
+        with:
+          message: "Chore: update sponsors.svg"
+          add: "sponsors.*"
+        env:
+          GITHUB_TOKEN: ${{ secres.GITHUB_TOKEN }}
