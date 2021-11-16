@@ -3,9 +3,12 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "update:notion": "node scripts/update-notion.js"
+  },
   "license": "MIT",
   "devDependencies": {
-    "@2nthony/prettier-config": "^1.0.0"
+    "@2nthony/prettier-config": "^1.0.0",
+    "@notionhq/client": "^0.4.6"
   }
 }
