@@ -54,6 +54,7 @@ const notion = new Client({ auth: NOTION_TOKEN })
         login: properties.Name.title[0].plain_text,
         name: properties.Name.title[0].plain_text,
         avatarUrl:
+          properties.Avatar.url ||
           'https://cdn.jsdelivr.net/gh/2nthony/github-itself-image-hosting-service@main/uPic/2091637068521_.picKBbZLH.jpg',
       },
     }
