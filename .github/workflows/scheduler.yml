@@ -23,7 +23,7 @@ jobs:
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
 
       - name: Update sponsors.svg
-        run: npx sponsors-cli -w 800 -s false && npx sponsors-cli -w 1300 -o sponsors.wide.svg -s false
+        run: npx sponsors-cli -w 800 && npx sponsors-cli -w 1300 -o sponsors.wide.svg
         env:
           SPONSORS_TOKEN: ${{ secrets.SPONSORS_TOKEN }}
           SPONSORS_LOGIN: 2nthony
