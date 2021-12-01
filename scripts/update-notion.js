@@ -25,7 +25,7 @@ const notion = new Client({ auth: NOTION_TOKEN })
         {
           property: 'Date',
           date: {
-            past_month: {},
+            past_year: {},
           },
         },
       ],
@@ -51,11 +51,10 @@ const notion = new Client({ auth: NOTION_TOKEN })
       },
       sponsorEntity: {
         __typename: 'User',
-        login: properties.Name.title[0].plain_text,
         name: properties.Name.title[0].plain_text,
         avatarUrl:
           properties.Avatar.url ||
-          'https://cdn.jsdelivr.net/gh/2nthony/github-itself-image-hosting-service@main/uPic/2091637068521_.picKBbZLH.jpg',
+          'https://cdn.jsdelivr.net/gh/2nthony/github-itself-image-hosting-service@main/uPic/privateb0jeG3.png',
       },
     }
   })
