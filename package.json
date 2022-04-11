@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "update:notion": "node scripts/update-notion.js"
+    "build": "npx sponsorkit -w 800 --dir . && npx sponsorkit -w 1300 --name sponsors.wide --dir ."
   },
   "license": "MIT",
   "devDependencies": {
-    "@2nthony/prettier-config": "^1.0.0",
-    "@notionhq/client": "^0.4.6"
+    "@2nthony/prettier-config": "^1.0.0"
+  },
+  "dependencies": {
+    "sponsorkit": "^0.3.1"
   }
 }

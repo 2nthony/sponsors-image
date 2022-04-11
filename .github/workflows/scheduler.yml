@@ -16,16 +16,10 @@ jobs:
       - name: Install dependencies
         run: npm i
 
-      - name: Fetch notion supporters
-        run: npm run update:notion
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-
       - name: Update sponsors.svg
-        run: npx sponsors-cli -w 800 && npx sponsors-cli -w 1300 -o sponsors.wide.svg
+        run: npm run build
         env:
-          SPONSORS_TOKEN: ${{ secrets.SPONSORS_TOKEN }}
+          SPONSORS_TOKEN: ${{ secrets.SPONSORKIT_GITHUB_TOKEN }}
           SPONSORS_LOGIN: 2nthony
 
       - name: Commit
