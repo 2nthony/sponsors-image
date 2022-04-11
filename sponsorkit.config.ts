@@ -35,7 +35,7 @@ export default defineConfig({
           .addText('Special Sponsor', 'sponsorkit-tier-title')
           .addSpan(20)
           .addRaw(OPENSQUARE_LOGO(config.width, compose.height))
-          .addSpan(140)
+          .addSpan(80)
       },
     },
   ],
