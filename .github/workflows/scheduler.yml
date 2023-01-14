@@ -23,7 +23,7 @@ jobs:
           SPONSORKIT_GITHUB_LOGIN: 2nthony
 
       - name: Commit
-        uses: EndBug/add-and-commit@v4
+        uses: EndBug/add-and-commit@v9
         with:
           message: 'Chore: update sponsors.svg'
           add: 'sponsors.*'
