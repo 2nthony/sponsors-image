@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@2nthony/prettier-config": "^1.0.0"
+    "@2nthony/prettier-config": "^2.0.0"
   },
   "dependencies": {
     "sponsorkit": "^0.8.0"
